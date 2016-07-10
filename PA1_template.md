@@ -217,6 +217,4 @@ xyplot(steps~interval|factor(daytype),data = intervalsteps2,layout= c(1,2),type=
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
 ```
-```
-```
 
