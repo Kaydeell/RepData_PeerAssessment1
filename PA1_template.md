@@ -1,20 +1,10 @@
 
-
-```r
 ---
 title: "RepData Peer Assesment 1"
 output: html_document
 ---
 
 ## Loading and proccessing the data
-```
-
-```
-## Error: <text>:7:0: unexpected end of input
-## 5: 
-## 6: ## Loading and proccessing the data
-##   ^
-```
 
 ```r
 setwd("C:/Users/Kari/Documents/R/Activity monitoring data")
@@ -44,7 +34,7 @@ sumact <- aggregate(steps ~ date, activity, sum)
 hist(sumact$steps,col="red", main="Total number of steps taken each Day", xlab="Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 ```r
 meanssteps <- round(mean(sumact$steps))
@@ -76,7 +66,7 @@ plot(intervalsteps, type = "l", col = "orange", xlab = "5-minute interval", ylab
        "Number of steps", main = "Average number of steps taken across all days")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 ```r
 maxinterval <- intervalsteps$interval[which.max(intervalsteps$steps)]
@@ -155,7 +145,7 @@ newdatasteps <- aggregate(steps ~ date, newdata, sum)
 hist(newdatasteps$steps, col = "blue", main="Total number of steps taken each Day", xlab="Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
 Let us now analyize the impact of imputing missing data.
 
@@ -215,6 +205,4 @@ library(lattice)
 xyplot(steps~interval|factor(daytype),data = intervalsteps2,layout= c(1,2),type="l")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
-```
-
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
