@@ -1,7 +1,6 @@
 
 ---
-title: "RepData Peer Assesment 1"
-output: html_document
+# "RepData Peer Assesment 1"
 ---
 
 ## Loading and proccessing the data
