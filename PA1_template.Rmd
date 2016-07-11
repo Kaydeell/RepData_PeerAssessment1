@@ -1,5 +1,4 @@
 
-```{r }
 ---
 title: "RepData Peer Assesment 1"
 output: html_document
@@ -117,5 +116,3 @@ intervalsteps2 <- aggregate(steps ~ interval + daytype, newdata, mean)
 library(lattice)
 xyplot(steps~interval|factor(daytype),data = intervalsteps2,layout= c(1,2),type="l")
 ```
-```
-
